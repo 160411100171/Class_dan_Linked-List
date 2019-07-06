@@ -77,6 +77,49 @@ tidak dapat dilakukan dengan menggunakan perintah print().
         print(jumlah)
 
 --------------------------------------------------------------------------------------------------------------------------------
+Linked List - data berupa list yang biasanya ada di python namun linked list tidak ada di python.
+manfaat linked list:
+1.	Bisa menambah data sewaktu waktu
+2.	Bisa del data di mana mana
+3.	Bisa insert data di mana mana
+4.	Dinamis bisa di ubah
+
+--------------------------------------------------------------------------------------------------------------------------------
+Node List - metode untuk mencari alamat sebuah data yang tersimpan di memory point penting node:
+1.	data
+2.	pointer
+
+--------------------------------------------------------------------------------------------------------------------------------
+Travel List - karena dengan method travel kita dapat jalan jalan mengetahui data yang di masukkan.
+
+Berikut adalah class node list dan travel: 
+
+        class LinkedList:
+            def __init__(self):
+                self.head = None
+            def isEmpty(self):
+                return self.head==None
+            def add(self, item):
+                temp = Node(item)
+                temp.setNext(self.head)
+                self.head = temp
+            def size(self):
+                curent = self.head
+                count = 0
+                while curent != None:
+                    count = count + 1
+
+                    curent = curent.getNext()           
+                return count
+        mylist=LinkedList()
+        mylist.add(45)
+        mylist.add(34)
+        mylist.add(70)
+        print(mylist.size())
+
+        output: 3
+
+--------------------------------------------------------------------------------------------------------------------------------
 Tugas Praktikum
 1.	Buatlah class Matrix dengan beberapa method seperti berikut : 
 a.	Constructor : untuk inisialisasi matriks, dengan parameter berupa jumlah baris dan kolom suatu matrix, dan elemen matriks merupakan inputan dari user (di dalam constructor)
